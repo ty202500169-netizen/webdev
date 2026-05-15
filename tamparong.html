@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="expTracker.css">
+</head>
+<body>
+<main class="main-box">
+    <header>
+        <h1>Personal Expense Tracker</h1>
+    </header>
+
+    <section class="input-section">
+        <form id="expenseForm">
+            <label>Expense:</label>
+            <input type="text" id="itemName" required>
+
+            <label>Amount:</label>
+            <input type="number" id="itemAmount" step="0.01" required>
+
+            <label>Category:</label>
+            <select id="itemCategory">
+                <option value="Food">Food</option>
+                <option value="Transport">Transportation</option>
+                <option value="Bills">Bills</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button type="submit">Add Expense</button>
+        </form>
+    </section>
+
+    <section class="display-section">
+        <h3>Expenses</h3>
+        <ul id="expenseList"></ul>
+    </section>
+
+    <section class="summary-section">
+        <h3>Summary</h3>
+        <div class="total-box">
+            Total: ₱<span id="totalDisplay">0.00</span>
+        </div>
+    </section>
+</main>
+<script src="expTracker.js"></script>
+</body>
+</html>
